@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>SET</title>
+</head>
+<body>
+    <div id="homePage">
+    <div id="pageBody">
+    <h1>SET</h1>
+    <h2>Játékszabály</h2>
+    <p>A játék célja hogy 3 kártyából álló SET-eket találjunk meg az asztalra lehelyezett 12 kártyából. Minden kártyának 4 tulajdonsága van, amik a következők:</p>
+    <ul>
+        <li><b>FORMA:</b> ovális, hullámos, rombusz</li>
+        <li><b>SZÍN:</b> piros, zöld, lila</li>
+        <li><b>SZÁM:</b> 1, 2 vagy 3 forma</li>
+        <li><b>TARTALOM:</b> tömör, csíkos, üres</li>
+    </ul>
+    <p>Egy SET 3 kártyából áll, amiben minden jellemzőt külön megvizsgálva, azoknak</p>
+    <ul>
+        <li>vagy minden kártyán azonosnak,</li>
+        <li>vagy minden kártyán különbözőnek kell lennie.</li>
+    </ul>
+    <p>Ennek a szabálynak MINDEN tulajdonság esetében meg kell felelnie a kiválasztott három lapnak. Más szavakkal: a forma vagy azononos mindhárom kártyán, vagy mindegyiken más; a szín vagy azonos mindhárom kártyán, vagy mindegyiken különböző, stb... Fordítva: ha a lapokon egy tulajdonságot vizsgálva 2 azonos és 1 különböző típus látható, akkor az nem SET. Például, ha 2 lap piros, 1 pedig lila, akkor az nem SET.</p>
+    <a href="https://www.masterbaboon.com/wp-content/uploads/2010/09/sets_examples1-1024x586.png" target="_blank">Helyes és helytelen SET-ek</a><br>
+    <a href="https://fejlesztojatekvilag.hu/uploaded/set_magyar_szabaly.pdf" target="_blank">Az eredeti kártyajáték szabálya (ez is tartalmaz példát helyes és helytelen SET-ekre)</a>
+
+    <h2>Játék indítása</h2>
+    <p><u>Játékosok száma:</u></p>
+    <input type="number" id="playerNum" name="playerNum" min="1" max="10" value="1">
+    <input type="button" value="Beállít" onclick="textbox()">
+    <br>
+    <br>
+    <div id="textboxes"></div>
+
+    <p><u>Játék módja:</u></p>
+    <input type="radio" id="practice" name="gameMode" onclick="practiceMode()">
+    <label for="practice">Gyakorló</label><br>
+    <input type="radio" id="comptetitive" name="gameMode" onclick="competitiveMode()">
+    <label for="comptetitive">Verseny</label><br>
+
+    <div id="otherSettings">
+    <p><u>Egyéb beállítások:</u></p>
+    <p>Legyen-e olyan gomb az oldalon, amelyre kattintva a gép megmondja, van-e SET a leosztásban?</p>
+    <input type="radio" id="isThereSetYes" name="setInHand" value="isThereSetYes">
+    <label for="isThereSetYes">Igen</label><br>
+    <input type="radio" id="isThereSetNo" name="setInHand" value="isThereSetNo">
+    <label for="isThereSetNo">Nem</label><br>
+
+    <p>Legyen-e olyan gomb, amelyre kattintva a gép mutat egy SET-et?</p>
+    <input type="radio" id="showSetYes" name="showSet" value="showSetYes">
+    <label for="showSetYes">Igen</label><br>
+    <input type="radio" id="showSetNo" name="showSet" value="showSetNo">
+    <label for="showSetNo">Nem</label><br>
+
+    <p>A plusz 3 lapos kiegészítés automatikusan vagy külön gombra menjen?</p>
+    <input type="radio" id="automaticRadio" name="autoorNot" value="automaticRadio">
+    <label for="automaticRadio">automatikus</label><br>
+    <input type="radio" id="separateRadio" name="autoorNot" value="separateRadio">
+    <label for="separateRadio">külön gomb</label><br>
+    </div>
+
+    <h1><input type="button" value="Start" onclick="startGame()"></h1>
+    </div>
+    </div>
+
+    <div id="pageBody">
+    <div id="gamePage">
+        <div id="playerNames"></div><span id="points"></span>
+        <div id="countdown"></div>
+    </div>
+    </div>
+    
+</body>
+</html>

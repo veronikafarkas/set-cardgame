@@ -1,0 +1,56 @@
+body {
+    text-align: justify;
+    margin-left: 300px;
+	margin-right: 300px;
+    size: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36pt;
+}
+
+#homePage {
+    display: block;
+}
+
+#gamePage {
+    display: none;
+}
+
+table{
+    pointer-events: none;
+}
+
+img:hover {
+    opacity: 0.3;
+    background-color: darkgrey;
+}
+
+#pageBody {
+    background-color: #1a1a1a;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 25px;
+
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: #363636;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #6e6e6e;
+    background-color: transparent;
+    text-decoration: none;
+  }
