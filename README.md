@@ -3,7 +3,8 @@
 Set nevű kártyajáték Javascriptben megvalósítva, eredetileg beadandóként készült. A játék logikája teljes, de hibakezelés néhány helyen hiányos, és néhány funkció is hiányzik belőle, amivel teljes lehetne a játékélmény.
 Készítés dátuma: 2020. 11. 29. 
 
-Játékszabály
+Játékszabály:
+
 A játék célja hogy 3 kártyából álló SET-eket találjunk meg az asztalra lehelyezett 12 kártyából. Minden kártyának 4 tulajdonsága van, amik a következők:
 - FORMA: ovális, hullámos, rombusz
 - SZÍN: piros, zöld, lila
